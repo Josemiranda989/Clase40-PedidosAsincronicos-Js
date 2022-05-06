@@ -40,7 +40,7 @@ window.onload = () => {
     })
       .then((res) => res.json())
       .then((res) => {
-        location.replace("/formulario.html");
+        location.replace("/frontend/home.html");
       });
   });
 
@@ -65,7 +65,7 @@ window.onload = () => {
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
-        location.replace("/formulario.html");
+        location.replace("/frontend/home.html");
       });
   });
   // Paso 4 - Eliminar una película
