@@ -1,6 +1,6 @@
 window.onload = () => {
   // Paso 1 - recupero cualquier pelicula para mostrarla en el formulario
-  fetch("http://localhost:3031/api/movies/1/")
+  fetch("http://localhost:3031/api/movies/2/")
     .then(function (response) {
       return response.json();
     })
@@ -17,6 +17,7 @@ window.onload = () => {
         .slice(0, 10);
       document.getElementById("length").value = data.length;
     })
+    
     .catch(function (error) {
       console.error(error);
     });
@@ -40,7 +41,8 @@ window.onload = () => {
     })
       .then((res) => res.json())
       .then((res) => {
-        location.replace("/frontend/home.html");
+        // location.replace("/frontend/home.html"); // si usan liveserver.
+        location.reload()
       });
   });
 
@@ -64,8 +66,8 @@ window.onload = () => {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
-        location.replace("/frontend/home.html");
+        //  location.replace("/frontend/home.html"); // si usan liveserver.
+        location.reload()
       });
   });
   // Paso 4 - Eliminar una película
